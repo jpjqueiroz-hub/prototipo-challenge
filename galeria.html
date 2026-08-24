@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Galeria</title>
+</head>
+<body>
+    <div class="smartphone">
+        <div class="smartphone-tela galeria-tela">
+            <div class="status-bar galeria-status">
+                <p>9:40</p>
+                <img src="images/iconestopo-preto.png" alt="Ícones de conexão, bluetooth, wi-fi e bateria">
+            </div>
+            <div class="galeria-conteudo">
+                <div class="galeria-header">
+                    <h1 id="tituloGaleria">Fotos</h1>
+                    <img src="images/iconesgaleria.png" alt="Pesquisar, selecionar e mais opções">
+                </div>
+                <div class="tela-fotos" id="telaFotos">
+                    <p>Hoje</p>
+                    <div class="fotos-grid">
+                        <img src="images/matemática.png" alt="Foto de exercício de matemática">
+                        <img src="images/abaporu.png" alt="Foto da obra Abaporu">
+                        <img src="images/lousa.png" alt="Foto de conteúdo de história">
+                    </div>
+                </div>
+                <div class="tela-albuns" id="telaAlbuns">
+                    <button class="pasta-btn" id="estudosBtn">
+                        <img src="images/pasta-estudos.png" alt="Pasta Estudos">
+                        <p>Estudos</p>
+                    </button>
+                    <button class="pasta-btn">
+                        <img src="images/pasta-fotos.png" alt="Pasta Fotos">
+                        <p>Fotos</p>
+                    </button>
+                </div>
+                <div class="tela-estudos" id="telaEstudos">
+                    <div class="fotos-grid">
+                        <a href="resolver.html?abrir=resolucao">
+                            <img src="images/matemática.png" alt="Foto de exercício de matemática">
+                        </a>
+                        <a href="explicar.html?abrir=explicacao">
+                            <img src="images/abaporu.png" alt="Foto da obra Abaporu">
+                        </a>
+                        <a href="resumo.html?abrir=resumo">
+                            <img src="images/lousa.png" alt="Foto de conteúdo de história">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="galeria-menu">
+                <button id="fotosBtn" class="galeria-menu-btn ativo">
+                    <i class="fa-solid fa-image"></i>
+                    <p>Fotos</p>
+                </button>
+                <button id="albunsBtn" class="galeria-menu-btn">
+                    <i class="fa-solid fa-folder"></i>
+                    <p>Álbuns</p>
+                </button>
+            </div>
+            <div class="navegacao galeria-navegacao">
+                <a href="recentes.html">
+                    <img src="images/iconerecentes-preto.png" alt="Aplicativos recentes">
+                </a>
+                <a href="index.html">
+                    <img src="images/iconehome-preto.png" alt="Tela inicial">
+                </a>
+                <button id="voltarBtn">
+                    <img src="images/iconevoltar-preto.png" alt="Voltar">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/galeria.js"></script>
+</body>
+</html>

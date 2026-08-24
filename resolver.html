@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Camera</title>
+</head>
+<body>
+    <div class="smartphone">
+        <div class="smartphone-tela camera-tela">
+            <div class="status-bar">
+                <p>9:40</p>
+                <img src="images/iconestopo.png" alt="Ícones de conexão, bluetooth, wi-fi e bateria">
+            </div>
+            <button class="assistente-btn" id="assistenteBtn">
+                <img src="images/iconeassistente.png" alt="Abrir assistente acadêmico">
+            </button>
+            <div class="acoes-camera" id="acoesCamera">
+                <a href="resumo.html">RESUMIR</a>
+                <button id="resolverBtn">RESOLVER</button>
+                <a href="explicar.html">EXPLICAR</a>
+            </div>
+            <div class="painel-resolver" id="painelResolver">
+                <div class="painel-topo">
+                    <h2>PASSO A PASSO</h2>
+                    <button id="expandirBtn">
+                        <img src="images/expandir.png" alt="Expandir painel">
+                    </button>
+                </div>
+                <div class="passos">
+                    <details open>
+                        <summary>1 - Identificar os Coeficientes</summary>
+                        <div class="passo-conteudo">
+                            <p>Comparando com a forma geral:</p>
+                            <p>ax² + bx + c = 0</p>
+                            <p>a = 1</p>
+                            <p>b = 5</p>
+                            <p>c = 6</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>2 - Usar a fórmula de Bhaskara</summary>
+                        <div class="passo-conteudo">
+                            <p>x = (-b ± √Δ) / 2a</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>3 - Calcular o Delta</summary>
+                        <div class="passo-conteudo">
+                            <p>Δ = b² - 4ac</p>
+                            <p>Δ = 5² - 4(1)(6)</p>
+                            <p>Δ = 25 - 24 = 1</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>4 - Substituir na fórmula</summary>
+                        <div class="passo-conteudo">
+                            <p>x = (-5 ± √1) / 2</p>
+                            <p>x = (-5 ± 1) / 2</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>5 - Encontrar Solução Final</summary>
+                        <div class="passo-conteudo">
+                            <p>x₁ = -2</p>
+                            <p>x₂ = -3</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="acoes-resolver">
+                    <a href="resumo.html">RESUMIR</a>
+                    <button class="selecionado">RESOLVER</button>
+                    <a href="explicar.html">EXPLICAR</a>
+                </div>
+            </div>
+            <div class="navegacao">
+                <a href="recentes.html">
+                    <img src="images/iconerecentes.png" alt="Aplicativos recentes">
+                </a>
+                <a href="index.html">
+                    <img src="images/iconehome.png" alt="Tela inicial">
+                </a>
+                <button id="voltarBtn">
+                    <img src="images/iconevoltar.png" alt="Voltar">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/resolver.js"></script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+:root {
+    --font-body: Arial, sans-serif;
+    --color-background: #1f1f1f;
+    --color-dark-grey: #111111;
+    --color-white: #ffffff;
+    --color-dark: #000000;
+    --color-accent: #f4e600;
+    --color-grey: #555555;
+    --font-xs: 0.8rem;
+    --font-sm: 1rem;
+    --font-md: 1.4rem;
+    --font-lg: 4.5rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    --radius-phone: 2.8rem;
+    --radius-screen: 2.2rem;
+    --phone-width: 24.375rem;
+    --phone-height: 52.75rem;
+    --icon-md: 4rem;
+    --icon-sm: 1.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+}
+.smartphone {
+    width: var(--phone-width);
+    height: var(--phone-height);
+    padding: var(--spacing-sm);
+    background-color: var(--color-dark-grey);
+    border-radius: var(--radius-phone);
+}
+.smartphone-tela {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-screen);
+    background-image: url("../images/wallpaper.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+.status-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+.status-bar p {
+    font-size: var(--font-sm);
+    font-weight: 600;
+}
+.status-bar img {
+    width: 5.625rem;
+}
+.relogio {
+    position: absolute;
+    top: 11.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.relogio h1 {
+    font-size: var(--font-lg);
+    font-weight: 400;
+}
+.relogio p {
+    font-size: var(--font-md);
+}
+.atalhos {
+    position: absolute;
+    bottom: 4.375rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3.75rem;
+}
+.atalho {
+    display: block;
+    width: var(--icon-md);
+    height: var(--icon-md);
+}
+.atalho img {
+    width: var(--icon-md);
+    height: var(--icon-md);
+    object-fit: contain;
+}
+.navegacao {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navegacao a {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+}
+.navegacao img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CSS camera */
+
+.camera-tela {
+    background-image: url("../images/wallpaper2.png");
+    background-size: cover;
+    background-position: center;
+}
+.assistente-btn {
+    position: absolute;
+    left: var(--spacing-md);
+    bottom: 14rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.assistente-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.acoes-camera {
+    position: absolute;
+    left: 50%;
+    bottom: 13.5rem;
+    transform: translateX(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    background-color: var(--color-dark-grey);
+    z-index: 4;
+}
+.acoes-camera.ativo {
+    display: flex;
+}
+.acoes-camera a,
+.acoes-camera button,
+.acoes-resolver a,
+.acoes-resolver button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-screen);
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    font-size: var(--font-xs);
+    text-decoration: none;
+    cursor: pointer;
+}
+.painel-resolver {
+    position: absolute;
+    left: 0;
+    bottom: 4rem;
+    width: 100%;
+    height: 23rem;
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-dark-grey);
+    color: var(--color-white);
+}
+.painel-resolver.ativo {
+    display: flex;
+}
+.painel-resolver.expandido {
+    top: 3.5rem;
+    bottom: 4rem;
+    height: auto;
+}
+
+.acoes-resolver .selecionado {
+    color: var(--color-accent);
+}
+.painel-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+}
+.painel-topo h2 {
+    font-size: var(--font-sm);
+}
+.painel-topo button {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.painel-topo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.passos {
+    display: grid;
+    overflow-y: auto;
+}
+.passos details {
+    background-color: var(--color-dark-grey);
+    border-bottom: 1px solid var(--color-background);
+}
+.passos summary {
+    padding: var(--spacing-md);
+    font-size: var(--font-xs);
+    cursor: pointer;
+}
+.passo-conteudo {
+    display: grid;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    font-size: var(--font-xs);
+    line-height: 1.5;
+}
+.acoes-resolver {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+}
+.navegacao {
+    z-index: 5;
+}
+
+.navegacao button {
+    width: var(--icon-sm);
+    height: var(--icon-sm);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.navegacao button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.explicar-tela {
+    background-image: url("../images/wallpaper3.png");
+    background-size: cover;
+    background-position: center;
+}
+.acoes-resolver .selecionado {
+    color: var(--color-accent);
+}
+
+.assist-btn-explicar {
+    position: absolute;
+    left: var(--spacing-md);
+    bottom: 15.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.assist-btn-explicar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.acoes-camera-explicar {
+    position: absolute;
+    left: 50%;
+    bottom: 15rem;
+    transform: translateX(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    background-color: var(--color-dark-grey);
+    z-index: 4;
+}
+.acoes-camera-explicar.ativo {
+    display: flex;
+}
+.acoes-camera-explicar a,
+.acoes-camera-explicar button,
+.acoes-resolver a,
+.acoes-resolver button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-screen);
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    font-size: var(--font-xs);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.resumo-tela {
+    background-image: url("../images/wallpaper4.png");
+    background-size: cover;
+    background-position: center;
+}
+.acoes-resolver .selecionado {
+    color: var(--color-accent);
+}
+
+.assist-btn-resumir{
+    position: absolute;
+    left: var(--spacing-md);
+    bottom: 14.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.assist-btn-resumir img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.acoes-camera-resumir {
+    position: absolute;
+    left: 50%;
+    bottom: 14rem;
+    transform: translateX(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    padding: var(--spacing-sm) 0;
+    background-color: var(--color-dark-grey);
+    z-index: 4;
+}
+.acoes-camera-resumir.ativo {
+    display: flex;
+}
+.acoes-camera-resumir a,
+.acoes-camera-resumir button,
+.acoes-resolver a,
+.acoes-resolver button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    border-radius: var(--radius-screen);
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    font-size: var(--font-xs);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* CSS da Galeria */
+
+.galeria-tela {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+.galeria-status {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+.galeria-conteudo {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 11rem);
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+}
+.galeria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+.galeria-header h1 {
+    font-size: var(--font-md);
+}
+.galeria-header img {
+    width: 5.5rem;
+}
+.tela-fotos {
+    display: block;
+}
+.tela-fotos p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-grey);
+}
+.fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xs);
+}
+
+.fotos-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fotos-grid a {
+    display: block;
+}
+.fotos-grid a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tela-albuns {
+    display: none;
+    grid-template-columns: repeat(2, 6.5rem);
+    gap: var(--spacing-lg);
+}
+.pasta-btn img {
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: contain;
+}
+.pasta-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pasta-btn p {
+    margin-top: var(--spacing-xs);
+    font-size: var(--font-sm);
+    font-weight: 600;
+}
+.tela-estudos {
+    display: none;
+}
+.galeria-menu {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-sm);
+    background-color: var(--color-white);
+}
+.galeria-menu-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--color-grey);
+    cursor: pointer;
+}
+.galeria-menu-btn img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+.galeria-menu-btn p {
+    font-size: var(--font-xs);
+}
+.galeria-menu-btn.ativo {
+    color: var(--color-accent);
+}
+.galeria-navegacao {
+    background-color: var(--color-white);
+}
+.galeria-tela {
+    background-color: var(--color-white);
+    background-image: none;
+    color: var(--color-dark);
+}
+.galeria-status {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+}
+.galeria-conteudo {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 11rem);
+    padding: var(--spacing-lg);
+    background-color: var(--color-white);
+    overflow-y: auto;
+}
+.galeria-menu {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-sm);
+    background-color: var(--color-white);
+    z-index: 4;
+}
+.galeria-navegacao {
+    background-color: var(--color-white);
+}
